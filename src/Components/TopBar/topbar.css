@@ -1,0 +1,34 @@
+.navbar-absolute {
+    position: fixed !important;
+    top: 0;
+    z-index: 3000 !important;
+    background-color: #fff !important;
+}
+
+.nav-bar-container {
+    width: 100%;
+    background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.navbar-expand-lg {
+    background: #000417;
+}
+
+.avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom left, #4ABD95, #4ABD95, #4ABD95) !important;
+    background-color: #4ABD95 !important;
+}
