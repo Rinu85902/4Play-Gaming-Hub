@@ -87,16 +87,18 @@ setNewSession(sessionCopy);
                 <div className="card-header">
                     <h4 className="card-title"></h4>
                     <div className="card-header d-flex justify-content-between flex-wrap align-items-center pb-2">
+                        <div className='res-common'>
                         <InputComponent nameclass="name-input" label="playername" onChange={setPlayerName} value={playerName} placeholder="Player Name"/>
-                        <div className='d-flex align-items-center'>
+                        </div>
+                        <div className='d-flex align-items-center res-common'>
                             <label>System </label>
                             <InputComponent label="system" onChange={setSystem} value={system} type="number"/>
                         </div>
-                        <div className='d-flex align-items-center'>
+                        <div className='d-flex align-items-center res-common'>
                         <label>Players </label>
                         <CounterInput min={1} max={4} value={playerCount} onChange={(val) => setPlayerCount(Number(val))}/>
                         </div>
-                        <div className='d-flex align-items-center'>
+                        <div className='d-flex align-items-center res-common mob-direction'>
                         <label>Additional Controllers </label>
                         <CounterInput min={0} max={4} value={controllerCount} onChange={setControllerCount}/>
                         </div>
@@ -111,7 +113,7 @@ setNewSession(sessionCopy);
                     <div className='card-header'>
                      
                             {session.map((item, i)=>(
-                                    <div className="card-header d-flex justify-content-between flex-wrap align-items-center pb-2" key={i}>
+                                    <div className="card-header d-flex justify-content-between response-wrap flex-wrap align-items-center pb-2" key={i}>
                                         <div><span>Name: </span>{item.gamerName}</div>
                                         <div><span>No of Controllers: </span>{item.noOfControllers}</div>
                                         <div><span>No of Players: </span>{item.noOfPlayers}</div>
