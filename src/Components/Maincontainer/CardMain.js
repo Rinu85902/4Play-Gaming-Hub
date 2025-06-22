@@ -13,7 +13,7 @@ export default function CardMain(){
     const [session, setNewSession] = useState([]);
     const [currentTime, setCurrentTime] = useState(null);
     const [endTime, setEndTime] = useState(null);
-    const [totalHr, setTotalHr] = useState(2);
+    const [totalHr, setTotalHr] = useState(null);
 
     //let currentTime;
     let started ={};
@@ -38,14 +38,14 @@ export default function CardMain(){
 
         
     if (currentTime) {
-        const durationInMinutes = 120; // or 'hour'
-        //const durationInMinutes = endTime.diff(currentTime, 'minute'); // or 'hour'
-        //const hours = Math.floor(durationInMinutes / 60);
-        //const minutes = durationInMinutes % 60;
-        //const formattedDuration = `${hours}h ${minutes}m`;
+       // const durationInMinutes = 120; // or 'hour'
+        const durationInMinutes = endTime.diff(currentTime, 'minute'); // or 'hour'
+        const hours = Math.floor(durationInMinutes / 60);
+        const minutes = durationInMinutes % 60;
+        const formattedDuration = `${hours}h ${minutes}m`;
 
-      //  setTotalHr(formattedDuration);
-      //  console.log("Total Time:", formattedDuration);
+        setTotalHr(formattedDuration);
+        console.log("Total Time:", formattedDuration);
 
         let singlePlayer = 150;
         let doublePlayer = 170;
